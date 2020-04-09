@@ -16,6 +16,7 @@ class Cart extends Model
     $user_id = Auth::id();
     $data['my_carts'] = $this->where('user_id',$user_id)->get();
 
+    //個数と合計値を取得
     $data['count']=0;
     $data['sum']=0;
       
@@ -48,5 +49,14 @@ class Cart extends Model
             $message = '削除に失敗しました';
         }
         return $message;
+    }
+
+    public function checkoutCart()
+    {
+        $user_id = Auth::id(); 
+        $checkout_items=$this->where('user_id', $user_id)->get();
+        $this->where('user_id', $user_id)->delete();
+ 
+        return $checkout_items;     
     }
 }
