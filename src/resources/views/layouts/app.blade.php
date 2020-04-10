@@ -16,7 +16,7 @@
 </head>
 <body>
    <div id="app">
-       <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:#0092b3; color:#fefefe;">
+       <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:rgb(250, 176, 17); color:#fefefe;">
            <div class="container">
                <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ url('/') }}" >
                    {{ config('app.name', 'Laravel') }}
@@ -72,10 +72,10 @@
            </div>
        </nav>
 
-       <main class="py-4">
+       <main class="py-0">
            @yield('content')
        </main>
-       <footer class="footer_design">
+       <footer class="footer_design" style="background-color:rgb(250, 176, 17); color:#fefefe;" >
 
        @guest
            <p class="nav-item" style="display:inline;">

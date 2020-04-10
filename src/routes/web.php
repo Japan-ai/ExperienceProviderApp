@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'ShopController@index');
 
-Route::group(['middleware' => ['auth']], function () {
+Route::group(['middleware' => 'auth'], function () {
 Route::get('/mycart', 'ShopController@myCart');
 Route::post('/mycart', 'ShopController@addMycart');
 Route::post('/cartdelete', 'ShopController@deleteCart');

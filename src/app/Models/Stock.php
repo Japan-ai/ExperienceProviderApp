@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Stock extends Model
 {
+    //Stocksテーブルのidカラムは外部からの変更を許可しない
     protected $guarded = [
         'id'
       ];

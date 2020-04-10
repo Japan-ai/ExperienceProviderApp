@@ -39,6 +39,12 @@ class Cart extends Model
         return $message;
     }
 
+    //cartsテーブルはstocksテーブルに従属するリレーション
+    public function stock()
+    {
+        return $this->belongsTo('\App\Models\Stock');
+    }
+
     public function deleteCart($stock_id)
     {
         $user_id = Auth::id();

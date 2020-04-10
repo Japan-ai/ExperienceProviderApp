@@ -105,7 +105,7 @@ class StockTableSeeder extends Seeder
  
         DB::table('stocks')->insert([
             'name' => '経験者によるサーフィン教室',
-            'detail' => '【あなた自身はプレーヤーとして体験してみませんか?】半日(ボード・ウェットスーツの貸出し含む)',
+            'detail' => '【あなた自身がプレーヤーとして体験してみませんか?】半日(ボード・ウェットスーツの貸出し含む)',
             'fee' => 8000,
             'imgpath' => 'surfing.jpeg',
         ]);
