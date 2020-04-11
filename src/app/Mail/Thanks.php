@@ -19,6 +19,6 @@ class Thanks extends Mailable
     public function build()
     {
       return $this->markdown('mails.thanks',$this->mail_data) 
-      ->subject('DreamMapperShopでご購入頂きありがとうございます'); 
+      ->subject('Experience Provider Shopでご購入頂きありがとうございます'); 
     }
 }
