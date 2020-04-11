@@ -18,7 +18,7 @@
                       <form action="mycart" method="post">
                         @csrf
                         <input type="hidden" name="stock_id" value="{{ $stock->id }}">
-                        <input type="submit" value="カートに追加">
+                        <input type="submit" value="カートに追加" style="background-color:rgb(250, 176, 17); border-color:rgb(250, 176, 17); color:#fefefe;">
                       </form>
                     </div>
                   </div>

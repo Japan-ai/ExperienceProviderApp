@@ -21,7 +21,7 @@
                                <input type="hidden" name="delete" value="delete">
                                <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
                                <input type="hidden" name="stock_id" value="{{ $my_cart->stock->id }}">
-                               <input type="submit" value="カートから削除する">
+                               <input type="submit" value="カートから削除する" style="background-color:rgb(250, 176, 17); border-color:rgb(250, 176, 17); color:#fefefe;">
                            </form>
                        </div>
                    @endforeach

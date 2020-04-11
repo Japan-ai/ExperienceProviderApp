@@ -1,7 +1,7 @@
 @component('mail::message')
 
 {{ $user }}様<br>
-この度はExperienceProviderShopで購入頂きありがとうございます。<br>
+この度はExperience Provider Shopで購入頂きありがとうございます。<br>
 
 お客様が購入した商品は<br>
 
