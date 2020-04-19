@@ -8,7 +8,7 @@
            {{ Auth::user()->name }}さんご購入ありがとうございました</h1>
 
            <div class="card-body" stye="color:#fefefe">
-               <p>ご登録頂いたメールアドレスへ決済情報をお送り致します。お手続き完了後、商品を発送致します。</p>
+               <p>ご登録頂いたメールアドレスへ決済情報をお送り致します。</p>
                <a href="/" style="color:#fefefe;">商品一覧へ</a>
            </div>
            </div>

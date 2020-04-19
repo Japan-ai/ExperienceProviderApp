@@ -11,7 +11,7 @@ class Thanks extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public function __construct()
+    public function __construct($mail_data)
     {
       $this->mail_data = $mail_data;
     }

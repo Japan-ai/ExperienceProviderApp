@@ -24,7 +24,7 @@ class StockTableSeeder extends Seeder
         ]);
  
         DB::table('stocks')->insert([
-            'name' => '小さな夢を掲げるためのオンラインコーチング',
+            'name' => '夢探しオンラインコーチング',
             'detail' => '【小さな夢を掲げ継続するための仕組みづくりをサポート】サブスク 月額料金',
             'fee' => 7000,
             'imgpath' => 'coaching.jpg',
@@ -39,7 +39,7 @@ class StockTableSeeder extends Seeder
  
  
         DB::table('stocks')->insert([
-            'name' => 'いつでも自宅で受渡し、ランドリー・クリーニングサービス',
+            'name' => '自宅で受渡し、ランドリー・クリーニングサービスで時間革命',
             'detail' => '【夢探しのため自分の時間を大切にしたいあなたに贈る】サブスク 月額料金',
             'fee' => 20000,
             'imgpath' => 'laundry.jpg',

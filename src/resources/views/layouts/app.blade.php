@@ -15,7 +15,7 @@
    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-   <div id="app">
+   <div id="app" style="background-color:#2c9bfc">
        <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:rgb(250, 176, 17); color:#fefefe;">
            <div class="container">
                <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ url('/') }}" >
@@ -72,7 +72,7 @@
            </div>
        </nav>
 
-       <main class="py-0">
+       <main class="py-0" style="background-color:#2c9bfc">
            @yield('content')
        </main>
        <footer class="footer_design" style="background-color:rgb(250, 176, 17); color:#fefefe;" >
