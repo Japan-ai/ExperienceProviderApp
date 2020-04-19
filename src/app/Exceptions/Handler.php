@@ -53,15 +53,3 @@ class Handler extends ExceptionHandler
         return parent::render($request, $exception);
     }
 }
-
-//管理者ログインのリダイレクト先に関する設定
-    protected function unauthenticated($request, AuthenticationException $exception)
-    {
-        if ($request->expectsJson()) {
-            return response()->json(['error' => 'Unauthenticated.'], 401);
-        }
-        if (in_array('admin', $exception->guards())) {
-            return redirect()->guest('admin/login');
-        }
-        return redirect()->guest(route('login'));
-    }
