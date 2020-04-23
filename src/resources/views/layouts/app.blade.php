@@ -35,11 +35,11 @@
                        <!-- Authentication Links -->
                        @guest
                            <li class="nav-item">
-                               <a class="nav-link" style="color:#fefefe;"  href="{{ route('user.login') }}">{{ __('ログイン') }}</a>
+                               <a class="nav-link" style="color:#fefefe;"  href="{{ route('login') }}">{{ __('ログイン') }}</a>
                            </li>
-                           @if (Route::has('user.register'))
+                           @if (Route::has('register'))
                                <li class="nav-item">
-                                   <a class="nav-link" style="color:#fefefe;"  href="{{ route('user.register') }}">{{ __('会員登録') }}</a>
+                                   <a class="nav-link" style="color:#fefefe;"  href="{{ route('register') }}">{{ __('会員登録') }}</a>
                                </li>
                            @endif
                        @else
@@ -49,13 +49,13 @@
                                </a>
 
                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                   <a class="dropdown-item" href="{{ route('user.logout') }}"
+                                   <a class="dropdown-item" href="{{ route('logout') }}"
                                       onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
                                        {{ __('ログアウト') }}
                                    </a>
 
-                                   <form id="logout-form" action="{{ route('user.logout') }}" method="POST" style="display: none;">
+                                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                        @csrf
                                    </form>
                                    <a class="dropdown-item" href="{{ url('/mycart') }}">
@@ -79,9 +79,9 @@
 
        @guest
            <p class="nav-item" style="display:inline;">
-               <a class="nav-link" href="{{ route('user.login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
-           @if (Route::has('user.register'))
-                   <a class="nav-link" href="{{ route('user.register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
+               <a class="nav-link" href="{{ route('login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
+           @if (Route::has('register'))
+                   <a class="nav-link" href="{{ route('register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
                </p>
            @endif  
        @endguest

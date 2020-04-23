@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', 'ShopController@index');
 
-Route::group(['middleware' => 'auth:user'], function () {
+Route::group(['middleware' => 'auth'], function () {
 Route::get('/mycart', 'ShopController@myCart');
 Route::post('/mycart', 'ShopController@addMycart')->name('mycart.add');
 Route::post('/cartdelete', 'ShopController@deleteCart');
 Route::post('/checkout', 'ShopController@checkout');
-
-Route::post('/login', 'User\Auth\LoginController@login')->name('user.login');
 });
+
+Auth::routes();
