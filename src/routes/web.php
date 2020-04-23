@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'ShopController@index');
+Route::get('/home', 'ShopController@index');
 
 Route::group(['middleware' => 'auth'], function () {
 Route::get('/mycart', 'ShopController@myCart');
