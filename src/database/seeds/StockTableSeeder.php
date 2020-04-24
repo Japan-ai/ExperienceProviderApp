@@ -11,9 +11,9 @@ class StockTableSeeder extends Seeder
         DB::table('stocks')->truncate(); 
         DB::table('stocks')->insert([
             'name' => '現役エンジニアによるプログラミング講座',
-            'detail' => '【オンラインにてキャリアプランを描くためのサポートを贈る】サブスク 月額料金',
+            'detail' => '【エンジニアを目指すあなたの夢探しをサポート】サブスク 月額',
             'fee' => 8000,
-            'imgpath' => 'programming.jpg',
+            'imgpath' => 'webdev.jpg',
         ]);
  
         DB::table('stocks')->insert([
@@ -25,14 +25,14 @@ class StockTableSeeder extends Seeder
  
         DB::table('stocks')->insert([
             'name' => '夢探しオンラインコーチング',
-            'detail' => '【小さな夢を掲げ継続するための仕組みづくりをサポート】サブスク 月額料金',
+            'detail' => '【小さな夢を掲げ継続するための仕組みづくりをサポート】サブスク 月額',
             'fee' => 7000,
             'imgpath' => 'coaching.jpg',
         ]);
  
         DB::table('stocks')->insert([
             'name' => '定額で、世界中に住み放題のシェアハウス',
-            'detail' => '【日常生活に人との出会いを贈る、好きな時に好きな場所で働く環境を贈る】サブスク 月額料金',
+            'detail' => '【人と人とのつながりがあなたの夢をうむ、好きな時に好きな場所で働く環境を贈る】サブスク 月額',
             'fee' => 85000,
             'imgpath' => 'sharehouse.jpg',
         ]);
@@ -40,16 +40,16 @@ class StockTableSeeder extends Seeder
  
         DB::table('stocks')->insert([
             'name' => '自宅で受渡し、ランドリー・クリーニングサービスで時間革命',
-            'detail' => '【夢探しのため自分の時間を大切にしたいあなたに贈る】サブスク 月額料金',
+            'detail' => '【夢探しのため自分の時間を大切にしたいあなたに贈る】サブスク 月額',
             'fee' => 20000,
             'imgpath' => 'laundry.jpg',
         ]);
  
         DB::table('stocks')->insert([
             'name' => '幼い頃の思い出を映像化',
-            'detail' => '【記憶を遡って小学生の時に感じた言葉にできない圧倒的なワクワク感、あなたの中にそんな原体験が眠ってはいないだろうか?】映像レコード１時間毎の料金',
+            'detail' => '【幼少期に感じた言葉にできない圧倒的なワクワク感、あなたの中にそんな原体験が眠ってはいないだろうか?】',
             'fee' => 3500,
-            'imgpath' => 'filming.jpg',
+            'imgpath' => 'film.jpg',
         ]);
  
         DB::table('stocks')->insert([
@@ -69,13 +69,13 @@ class StockTableSeeder extends Seeder
         DB::table('stocks')->insert([
             'name' => '海外インターンシップお役立ちパック',
             'detail' => '【気づかぬうちに習慣や常識が、
-            世界を見る目にフィルターをかけていないだろうか? 学校探しや家探しに役立つ情報提供をサポート】手配から帰国までのサポートプラン(学費および賃料を除く)',
+            世界を見る目にフィルターをかけていないだろうか? 異文化体験をサポート】',
             'fee' => 30000,
             'imgpath' => 'internship.jpg',
         ]);
  
         DB::table('stocks')->insert([
-            'name' => '親子で参加 化学実験教室',
+            'name' => '親子で参加する化学実験教室',
             'detail' => '【幼少期の原体験が、自分だけの生き方をつくる】全3
             回講座',
             'fee' => 15000,
@@ -83,7 +83,7 @@ class StockTableSeeder extends Seeder
         ]);
  
         DB::table('stocks')->insert([
-            'name' => '静岡県の茶農家と連携し、訪日外国人に向けて茶摘み体験企画を提供',
+            'name' => '静岡県の茶農家と連携し、訪日外国人へ茶摘み体験を提供',
             'detail' => '【日本文化を理解して、日本文化をおもてなししてみませんか?】1泊2日',
             'fee' => 7000,
             'imgpath' => 'greentea.jpg',
@@ -97,29 +97,29 @@ class StockTableSeeder extends Seeder
         ]);
  
         DB::table('stocks')->insert([
-            'name' => 'キャンプ体験一式セット',
-            'detail' => '【親子へ感動体験を贈る】2泊3日 キャンプサイト区画量含む',
+            'name' => 'キャンプ体験パック',
+            'detail' => '【親子へ感動体験を贈る、あなたオリジナルの行動の組み合わせがあなたの価値観をうむ】2泊3日',
             'fee' => 25000,
             'imgpath' => 'camp.jpg',
         ]);
  
         DB::table('stocks')->insert([
             'name' => '経験者によるサーフィン教室',
-            'detail' => '【あなた自身がプレーヤーとして体験してみませんか?】半日(ボード・ウェットスーツの貸出し含む)',
+            'detail' => '【あなた自身がプレーヤーとして体験してみませんか?原体験が夢をうむ】半日パック',
             'fee' => 8000,
-            'imgpath' => 'surfing.jpeg',
+            'imgpath' => 'surf.jpg',
         ]);
  
         DB::table('stocks')->insert([
-            'name' => '米作り体験パック',
-            'detail' => '【プロセスを重視してみませんか?】田植えから収穫までの料金',
+            'name' => '農業の未来を考える米作り体験',
+            'detail' => '【プロセスを重視してみませんか?新しい挑戦が夢をうむ】田植えから収穫まで',
             'fee' => 25000,
-            'imgpath' => 'rice.jpeg',
+            'imgpath' => 'rice.jpg',
         ]);
  
         DB::table('stocks')->insert([
             'name' => '建築家による家づくりコンサルティング',
-            'detail' => '【家を借りるでも買うでもなく、自らのアイディアで設計したいあなたに贈る】家づくりコンサルティング料1回当たりの料金',
+            'detail' => '【家を借りるでも買うでもなく、自らのアイディアで設計したいあなたに贈る】家づくりコンサルティング',
             'fee' => 10000,
             'imgpath' => 'home.jpg',
         ]);
