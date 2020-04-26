@@ -11,12 +11,15 @@ use App\Mail\Thanks;
 
 class ShopController extends Controller
 {
-public function index() 
-  {
-    $stocks = Stock::Paginate(6);
-    //$stocks変数も引渡す
-    return view('shop',compact('stocks'));
+public function index(Request $request)
+{
+  if($request->has('keyword')) {
+    $stocks = Stock::where ('name','like','%'.$request->get('keyword').'%')->paginate(6);
+  } else { 
+    $stocks = Stock::paginate(6);
   }
+  return view('shop', ['stocks'=>$stocks]);
+}
 
 public function myCart(Cart $cart)
 {
