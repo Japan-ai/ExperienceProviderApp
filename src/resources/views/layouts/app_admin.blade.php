@@ -19,7 +19,7 @@
    <div id="app" style="background-color:#2c9bfc">
        <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:rgb(250, 176, 17); color:#fefefe;">
            <div class="container">
-               <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ url('/') }}" >
+               <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ route('admin.home') }}" >
                    {{ config('app.name', 'Laravel') }}
                </a>
                <button class="navbar-toggler" type="button"  style="border-color:#fefefe" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

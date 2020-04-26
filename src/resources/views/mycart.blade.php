@@ -35,7 +35,7 @@
                        <button type="submit" class="btn btn-lg text-center buy-btn" style="background-color:rgb(250, 176, 17); color:#fefefe;">購入する</button>
                    </form>
        
-               <a href="/home"style="color:#fefefe">商品一覧へ戻る</a>
+               <a href="{{ route('home') }}" style="color:#fefefe">商品一覧へ戻る</a>
            </div>
            </div>
        </div>

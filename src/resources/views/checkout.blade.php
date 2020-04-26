@@ -9,7 +9,7 @@
 
            <div class="card-body" stye="color:#fefefe">
                <p>ご登録頂いたメールアドレスへ決済情報をお送り致します。</p>
-               <a href="/" style="color:#fefefe;">商品一覧へ</a>
+               <a href="{{ route('home') }}" style="color:#fefefe;">商品一覧へ</a>
            </div>
            </div>
        </div>
