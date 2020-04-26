@@ -1,8 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.app_admin')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
+<div class="container" style="background-color:#26263c;">
+    <div class="row justify-content-center" >
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('パスワード リセット') }}</div>
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('password.email') }}">
+                    <form method="POST" action="{{ route('adminpassword.email') }}">
                         @csrf
 
                         <div class="form-group row">
