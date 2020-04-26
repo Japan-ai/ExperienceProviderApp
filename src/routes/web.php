@@ -17,7 +17,7 @@ Auth::routes();
 
 //ユーザー側 ログイン後
 Route::group(['middleware' => 'auth'], function () {
-Route::get('/home', 'ShopController@index');
+Route::get('/home', 'ShopController@index')->name('home');
 Route::get('/mycart', 'ShopController@myCart');
 Route::post('/mycart', 'ShopController@addMycart')->name('mycart.add');
 Route::post('/cartdelete', 'ShopController@deleteCart');

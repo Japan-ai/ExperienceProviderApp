@@ -13,12 +13,13 @@
    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
    <!-- Styles -->
    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+   <style>body{background-color: #26263c;}</style>
 </head>
 <body>
    <div id="app" style="background-color:#2c9bfc">
        <nav class="navbar navbar-expand-md navbar-light  shadow-sm" style="background-color:rgb(250, 176, 17); color:#fefefe;">
            <div class="container">
-               <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ route('home') }}" >
+               <a class="navbar-brand" style="color:#fefefe; font-size:1.4em" href="{{ url('/') }}" >
                    {{ config('app.name', 'Laravel') }}
                </a>
                <button class="navbar-toggler" type="button"  style="border-color:#fefefe" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -35,27 +36,27 @@
                        <!-- Authentication Links -->
                        @guest
                            <li class="nav-item">
-                               <a class="nav-link" style="color:#fefefe;"  href="{{ route('login') }}">{{ __('ログイン') }}</a>
+                               <a class="nav-link" style="color:#fefefe;"  href="{{ route('admin.login') }}">{{ __('ログイン') }}</a>
                            </li>
                            @if (Route::has('register'))
                                <li class="nav-item">
-                                   <a class="nav-link" style="color:#fefefe;"  href="{{ route('register') }}">{{ __('会員登録') }}</a>
+                                   <a class="nav-link" style="color:#fefefe;"  href="{{ route('admin.register') }}">{{ __('会員登録') }}</a>
                                </li>
                            @endif
                        @else
-                       <li class="nav-item dropdown">
-                               <a id="navbarDropdown" class="nav-link dropdown-toggle" style="color:#fefefe;" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                   {{ Auth::user()->name }}さん<span class="caret"></span>
+                           <li class="nav-item dropdown">
+                               <a id="navbarDropdown" style="color:#fefefe;" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                   {{ Auth::user()->name }} <span class="caret"></span>
                                </a>
 
                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                   <a class="dropdown-item" href="{{ route('logout') }}"
-                                      onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
+                                   <a class="dropdown-item" href="{{ route('admin.logout') }}"
+                                   onclick="event.preventDefault();
+                                                   document.getElementById('logout-form').submit();">
                                        {{ __('ログアウト') }}
                                    </a>
 
-                                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                   <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" style="display: none;">
                                        @csrf
                                    </form>
                                    <a class="dropdown-item" href="{{ url('/mycart') }}">
@@ -79,9 +80,9 @@
 
        @guest
            <p class="nav-item" style="display:inline;">
-               <a class="nav-link" href="{{ route('login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
+               <a class="nav-link" href="{{ route(' admin.login') }}" style="color:#fefefe; display:inline;">{{ __('ログイン') }}</a>
            @if (Route::has('register'))
-                   <a class="nav-link" href="{{ route('register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
+                   <a class="nav-link" href="{{ route('admin.register') }}" style="color:#fefefe; display:inline;">{{ __('会員登録') }}</a>
                </p>
            @endif  
        @endguest
