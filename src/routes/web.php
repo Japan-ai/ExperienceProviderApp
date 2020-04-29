@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Auth::routes();
-Route::get('/', 'ShopController@index')->name('top');
+Route::redirect('/', '/login')->name('top');
 
 //ユーザー側 ログイン後
 Route::group(['middleware' => 'auth'], function () {
